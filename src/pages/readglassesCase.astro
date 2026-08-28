@@ -1,0 +1,245 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Reading Glasses Case | Kacerys"
+    productName="Reading Glasses Case"
+    price="Coming Soon"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/readglassesCase/thumbnail.png"
+            alt="Reading Glasses Case"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb"
+                src="/assets/readglassesCase/top.png"
+                alt="Reading Glasses Case top"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/readglassesCase/sideRight.png"
+                alt="Reading Glasses Case right side"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/readglassesCase/sideLeft.png"
+                alt="Reading Glasses Case left side"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb active"
+                src="/assets/readglassesCase/thumbnail.png"
+                alt="Reading Glasses Case"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Custom colours available</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            A 3D-printed glasses case featuring a detailed floral design,
+            textured exterior and integrated hinge. Designed as a functional
+            protective case while showcasing decorative 3D modelling and FDM
+            printing techniques.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            The rigid PLA outer shell provides protection for the glasses, while
+            a separate flexible TPU inner liner helps protect the lenses and
+            frames from contact with the hard printed shell.
+        </p>
+
+        <!-- COLOURS -->
+        <div class="product-card">
+            <p class="section-title">Available Colours</p>
+
+            <p class="text-gray-400 text-sm mb-4">
+                Printed in PLA. Available in multiple colours.
+            </p>
+
+            <div>
+                <div class="colour-swatch">
+                    <span
+                        class="swatch-dot"
+                        style="background:#f5f7fa; border:1px solid #444;"
+                    ></span>
+                    White
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#212121;"></span>
+                    Black
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#2196f3;"></span>
+                    Blue
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#f44336;"></span>
+                    Red
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#9c27b0;"></span>
+                    Purple
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#ff9800;"></span>
+                    Orange
+                </div>
+            </div>
+
+            <p class="text-gray-500 text-xs mt-3">
+                Colour availability may vary. Contact us if you need a specific
+                colour.
+            </p>
+        </div>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Outer Material</span>
+                <span class="spec-value">PLA</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Inner Liner</span>
+                <span class="spec-value">Flexible TPU</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">165 × 40 × 65 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Hinge</span>
+                <span class="spec-value">Integrated 3D-Printed</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Assembly</span>
+                <span class="spec-value">Not Required</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <button class="buy-btn-disabled" disabled>
+            Buy on Etsy — Coming Soon
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a specific colour or custom size?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    This custom glasses case was designed as a functional
+                    3D-printing project combining practical protection with a
+                    detailed decorative design.
+                </p>
+
+                <p>
+                    The exterior features a detailed floral pattern surrounded
+                    by woven and textured elements, giving the case a
+                    distinctive handcrafted appearance while demonstrating how
+                    decorative geometry can be incorporated into a functional 3D
+                    model.
+                </p>
+
+                <p>
+                    The design was developed with attention to fit, clearances
+                    and moving parts so the lid can open and close correctly.
+                    Multiple iterations were used to refine the dimensions and
+                    ensure the individual printed components worked together
+                    correctly.
+                </p>
+            </div>
+        </div>
+
+        <!-- MATERIALS -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Materials & Components</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ PLA outer shell</li>
+                <li>✓ Flexible TPU inner liner</li>
+                <li>✓ Multi-colour printed details</li>
+                <li>✓ Integrated printed hinge</li>
+                <li>✓ Decorative floral exterior</li>
+            </ul>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Project Skills</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    3D Modelling · FDM 3D Printing · Functional Design ·
+                    Prototyping · Dimensional Tolerances · Decorative Modelling
+                    · Design for Manufacturing
+                </p>
+            </div>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

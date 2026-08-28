@@ -1,0 +1,160 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Henry Hoover Retaining Ring | Kacerys"
+    productName="Henry Hoover Retaining Ring"
+    price="€19.99"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/Henry-Hoover/retainingRing.webp"
+            alt="Henry Hoover Retaining Ring"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb active"
+                src="/assets/Henry-Hoover/retainingRing.webp"
+                alt="Henry Hoover Retaining Ring"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-repair">Repair</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Price excludes shipping</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            A simple and durable repair solution designed to restore broken hose
+            connections on Henry Hoover vacuum cleaners. Instead of replacing
+            the entire hose assembly, this 3D-printed retaining ring replaces
+            the damaged component and restores the hose connection.
+        </p>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">PETG</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Fit</span>
+                <span class="spec-value">OEM-Style Replacement</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Colour</span>
+                <span class="spec-value">Black</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Installation</span>
+                <span class="spec-value">Press Fit</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Tools Required</span>
+                <span class="spec-value">No</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <button class="buy-btn-disabled" disabled>
+            Buy on Etsy — Coming Soon
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Have a question about compatibility?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    The Henry Hoover is a popular vacuum cleaner in Ireland and
+                    the UK, but the hose retaining ring can crack or break over
+                    time. Replacing the entire hose assembly for one damaged
+                    component can be unnecessary and wasteful.
+                </p>
+
+                <p>
+                    This 3D-printed retaining ring is designed to replace the
+                    damaged ring at the hose connection point and restore a
+                    secure fit.
+                </p>
+
+                <p>
+                    PETG was selected for the part because it provides greater
+                    toughness and flexibility than standard PLA, making it
+                    suitable for a functional component that experiences
+                    repeated handling.
+                </p>
+            </div>
+        </div>
+
+        <!-- INSTALLATION -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Installation</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    No tools are required for installation. Align the retaining
+                    ring with the hose connector and press it firmly into
+                    position until it is correctly seated.
+                </p>
+
+                <p>
+                    Check that the hose is securely retained before using the
+                    vacuum cleaner.
+                </p>
+            </div>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

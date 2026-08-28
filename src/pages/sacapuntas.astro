@@ -1,0 +1,214 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Giant Pencil Sharpener | Kacerys"
+    productName="Giant Decorative Pencil Sharpener"
+    price="€14.99"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/sacapuntas/size.png"
+            alt="Giant Decorative Pencil Sharpener"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/imagen1.png"
+                alt="Giant Pencil Sharpener view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/imagen2.png"
+                alt="Giant Pencil Sharpener view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/imagen3.png"
+                alt="Giant Pencil Sharpener view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/pink&yellow1.png"
+                alt="Pink and yellow Giant Pencil Sharpener"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/green.png"
+                alt="Green Giant Pencil Sharpener"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/sacapuntas/grey.png"
+                alt="Grey Giant Pencil Sharpener"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb active"
+                src="/assets/sacapuntas/size.png"
+                alt="Giant Pencil Sharpener dimensions"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Price excludes shipping</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Bring personality to your workspace with this oversized pencil
+            sharpener-inspired desk organiser. Designed to look like a giant
+            sharpener, this 3D-printed accessory is both practical and
+            eye-catching.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Perfect for storing pens, pencils, markers, scissors and other small
+            office supplies while adding a playful touch to your desk.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Available in multiple colour combinations, each piece is made to
+            order and works well in a home office, classroom, gaming setup or as
+            a quirky gift.
+        </p>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">PLA</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">100 × 49 × 79 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weight</span>
+                <span class="spec-value">Approx. 50 g</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Colour</span>
+                <span class="spec-value">Custom colours available</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Assembly</span>
+                <span class="spec-value">Not Required</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <a
+            href="https://www.etsy.com/ie/listing/4524847868/giant-pencil-sharpener-pen-holder-3d"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="buy-btn"
+        >
+            Buy on Etsy
+        </a>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a custom size or colour?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    Inspired by the familiar shape of a traditional pencil
+                    sharpener, this design scales the object up into a
+                    functional desk organiser.
+                </p>
+
+                <p>
+                    The oversized opening provides space for everyday desk items
+                    such as pens, pencils, markers and scissors, combining
+                    decorative design with practical storage.
+                </p>
+
+                <p>
+                    The model is 3D printed in PLA and can be produced in
+                    different colour combinations, allowing the design to match
+                    a workspace, classroom or gaming setup.
+                </p>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Features</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ Giant pencil sharpener-inspired design</li>
+                <li>✓ Functional pen and pencil storage</li>
+                <li>✓ Lightweight PLA construction</li>
+                <li>✓ Multiple colour combinations</li>
+                <li>✓ No assembly required</li>
+                <li>✓ Made to order</li>
+            </ul>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

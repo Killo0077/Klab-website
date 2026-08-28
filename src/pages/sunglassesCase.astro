@@ -1,0 +1,243 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Cyberpunk Sunglasses Case | Kacerys"
+    productName="Cyberpunk-Inspired Sunglasses Case"
+    price="Coming Soon"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/cyberpunk/sunglassescase.png"
+            alt="Cyberpunk-Inspired Sunglasses Case"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb active"
+                src="/assets/cyberpunk/sunglassescase.png"
+                alt="Cyberpunk Sunglasses Case closed"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/cyberpunk/sunglassesopen.png"
+                alt="Cyberpunk Sunglasses Case open"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-300 leading-relaxed">
+            A custom-designed and 3D-printed sunglasses case featuring a
+            Cyberpunk-inspired aesthetic. The rigid PLA outer shell provides
+            protection while a removable flexible TPU liner creates a softer
+            internal surface for the glasses.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            The case combines 3D-printed components with M4 metal hardware for
+            the hinge mechanism, creating a functional multi-material design.
+        </p>
+
+        <!-- COLOURS -->
+        <div class="product-card">
+            <p class="section-title">Available Colours</p>
+
+            <p class="text-gray-400 text-sm mb-4">
+                Printed in PLA with a flexible TPU inner liner. Available in
+                multiple colours.
+            </p>
+
+            <div>
+                <div class="colour-swatch">
+                    <span
+                        class="swatch-dot"
+                        style="background:#f5f7fa; border:1px solid #444;"
+                    ></span>
+                    White
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#212121;"></span>
+                    Black
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#2196f3;"></span>
+                    Blue
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#f44336;"></span>
+                    Red
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#9c27b0;"></span>
+                    Purple
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#ff9800;"></span>
+                    Orange
+                </div>
+            </div>
+
+            <p class="text-gray-500 text-xs mt-3">
+                Colour availability may vary. Contact us if you need a specific
+                colour.
+            </p>
+        </div>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Outer Material</span>
+                <span class="spec-value">PLA</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Inner Liner</span>
+                <span class="spec-value">Flexible TPU</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">160 × 30 × 50 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Hinge</span>
+                <span class="spec-value">M4 Hardware</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Assembly</span>
+                <span class="spec-value">Not Required</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <button class="buy-btn-disabled" disabled>
+            Buy on Etsy — Coming Soon
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a specific colour or custom size?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    This custom sunglasses case was designed and 3D printed as a
+                    practical protective case with a Cyberpunk-inspired
+                    aesthetic.
+                </p>
+
+                <p>
+                    The outer shell is printed in PLA, providing a rigid
+                    structure while keeping the case lightweight. A removable
+                    TPU inner liner creates a flexible internal surface to help
+                    protect the glasses from scratches and impacts.
+                </p>
+
+                <p>
+                    M4 metal hardware forms part of the hinge mechanism,
+                    combining printed components with standard hardware for a
+                    stronger functional assembly.
+                </p>
+
+                <p>
+                    The project involved 3D modelling, prototyping, dimensional
+                    adjustments, FDM printing and final assembly.
+                </p>
+            </div>
+        </div>
+
+        <!-- MATERIALS -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Materials & Components</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ PLA outer shell</li>
+                <li>✓ Flexible TPU inner liner</li>
+                <li>✓ M4 metal hardware</li>
+                <li>✓ Multi-colour printed details</li>
+                <li>✓ Removable protective liner</li>
+            </ul>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Design Features</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Rigid protective PLA shell with a flexible internal liner,
+                    mechanical hinge system and Cyberpunk-inspired exterior. The
+                    liner is designed as a separate component so different
+                    materials can be used where rigidity and flexibility are
+                    required.
+                </p>
+            </div>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Disclaimer</p>
+
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Cyberpunk 2077 and related trademarks are property of CD
+                    PROJEKT RED. This is an unofficial fan-made project and is
+                    not affiliated with or endorsed by CD PROJEKT RED.
+                </p>
+            </div>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

@@ -1,0 +1,185 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Bonsai Pot | Kacerys"
+    productName="Japanese-Inspired Bonsai Pot"
+    price="Coming Soon"
+>
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/bonsaiPot/bonsai pot thumbnail.png"
+            alt="Japanese-inspired bonsai pot"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb"
+                src="/assets/bonsaiPot/painted.png"
+                alt="Painted bonsai pot"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb active"
+                src="/assets/bonsaiPot/bonsai pot thumbnail.png"
+                alt="Bonsai pot"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-outdoor">Outdoor</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Custom colours available</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            The pot features Japanese-inspired detailing and a smooth curved
+            profile, while the surrounding stand provides a stable base and
+            gives the design a more traditional ornamental appearance.
+        </p>
+
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">PLA / PETG</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">150 × 140 × 120 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Installation</span>
+                <span class="spec-value">Not Required</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <p class="section-title">Available Colours</p>
+
+            <p class="text-gray-400 text-sm mb-4">
+                Printed in PLA. Available in multiple colours.
+            </p>
+
+            <div>
+                <div class="colour-swatch">
+                    <span
+                        class="swatch-dot"
+                        style="background:#f5f7fa; border:1px solid #444;"
+                    ></span>
+                    White
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#212121;"></span>
+                    Black
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#2196f3;"></span>
+                    Blue
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#f44336;"></span>
+                    Red
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#9c27b0;"></span>
+                    Purple
+                </div>
+
+                <div class="colour-swatch">
+                    <span class="swatch-dot" style="background:#ff9800;"></span>
+                    Orange
+                </div>
+            </div>
+
+            <p class="text-gray-500 text-xs mt-3">
+                Colour availability may vary. Contact us if you need a specific
+                colour.
+            </p>
+        </div>
+
+        <button class="buy-btn-disabled" disabled>
+            Buy on Etsy — Coming Soon
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a specific colour or custom size?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    This Japanese-inspired bonsai pot was designed as a
+                    functional 3D printing project that combines a rounded
+                    planting container with a separate decorative support
+                    structure.
+                </p>
+
+                <p>
+                    The pot features Japanese-inspired detailing and a smooth
+                    curved profile, while the surrounding stand provides a
+                    stable base and gives the design a more traditional
+                    ornamental appearance.
+                </p>
+
+                <p>
+                    The project was created as separate printable components,
+                    allowing different colour combinations to be used for the
+                    pot, stand and decorative details.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Materials & Components</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ PLA outer shell</li>
+                <li>✓ PETG components</li>
+                <li>✓ Multi-colour printed details</li>
+                <li>✓ Separate pot and decorative stand</li>
+                <li>✓ Japanese-inspired design</li>
+                <li>✓ Customisable colours and finishes</li>
+            </ul>
+        </div>
+    </div>
+
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

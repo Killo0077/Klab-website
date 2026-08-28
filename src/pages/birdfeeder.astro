@@ -1,0 +1,229 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Bird Feeder | Kacerys"
+    productName="Medieval Scroll Bird Feeder"
+    price="€49.99"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/papiro-birdfeeder/papiroF.png"
+            alt="Medieval Scroll Bird Feeder"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb active"
+                src="/assets/papiro-birdfeeder/brown.png"
+                alt="Brown Bird Feeder"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/green.png"
+                alt="Green Bird Feeder"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/imagen1.png"
+                alt="Bird Feeder view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/imagen3.png"
+                alt="Bird Feeder view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/imagen2.png"
+                alt="Bird Feeder view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/1.png"
+                alt="Bird Feeder view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/papiro-birdfeeder/papiroF.png"
+                alt="Bird Feeder"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-outdoor">Outdoor</span>
+        <span class="tag tag-garden">Garden</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Price excludes shipping</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            The Scroll Bird Feeder brings a touch of humour and character to any
+            garden. Inspired by ancient parchment scrolls, this unique feeder
+            displays a playful "Today's Menu" message while providing a
+            convenient feeding station for your feathered visitors.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Designed and 3D printed in durable PETG, it is suitable for outdoor
+            use and resistant to sun, rain and changing weather conditions.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Looking for something more personal? The front inscription can be
+            customised with your own text, family name, bird café name, or a
+            funny message.
+        </p>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">PETG</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">Approx. 172 × 167 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weight</span>
+                <span class="spec-value">Approx. 180 g</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Colour</span>
+                <span class="spec-value">
+                    Brown (Custom colours available)
+                </span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weather Resistant</span>
+                <span class="spec-value">Yes</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Assembly Required</span>
+                <span class="spec-value">Yes</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <a
+            href="https://www.etsy.com/ie/listing/4523048528/personalized-scroll-bird-feeder-3d?ref=related-1&logging_key=b089c0ffc5369f5d24e4801da0b33511e670a1cc%3A4523048528"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="buy-btn"
+        >
+            Buy on Etsy
+        </a>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a custom size or colour?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM SECTION -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    Today's Menu is officially open. Inspired by ancient
+                    parchment scrolls, this decorative bird feeder combines
+                    garden charm with practical functionality. Made from durable
+                    PETG and customisable with your own inscription, it's the
+                    perfect dining spot for your feathered guests.
+                </p>
+
+                <div>
+                    <p class="section-title mt-6">Assembly</p>
+
+                    <p>
+                        No tools required. Insert the four decorative scroll
+                        caps into the ends of the upper and lower scroll
+                        rollers. Press firmly until each cap is fully seated.
+                        Attach a cord, rope or wire through the mounting loops
+                        at the top. Fill the tray with your preferred bird seed
+                        mix and hang in your desired location.
+                    </p>
+
+                    <p class="mt-4">
+                        The feeder uses a friction-fit assembly, allowing the
+                        end caps to be installed securely without glue. For
+                        permanent outdoor installation, a small drop of adhesive
+                        may be applied if desired.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHAT'S IN THE BOX -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">What's In The Box</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ 1× Bird Feeder body</li>
+                <li>✓ 1× Mounting bracket</li>
+                <li>✓ 4× Decorative scroll caps</li>
+            </ul>
+
+            <div style="margin-top: 2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY SCRIPT -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

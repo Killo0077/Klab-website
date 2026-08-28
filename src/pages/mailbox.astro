@@ -1,0 +1,214 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Custom Mailbox Sign | Kacerys"
+    productName="Custom Mailbox Sign"
+    price="€17.99"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/mailbox/mailbox1.png"
+            alt="Custom Mailbox Sign"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb active"
+                src="/assets/mailbox/mailbox1.png"
+                alt="Custom Mailbox Sign"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/mailbox/2.png"
+                alt="Custom Mailbox Sign view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/mailbox/3.png"
+                alt="Custom Mailbox Sign view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/mailbox/4.png"
+                alt="Custom Mailbox Sign view"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-outdoor">Outdoor</span>
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Price excludes shipping</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Transform an ordinary mailbox into something uniquely yours. This
+            custom 3D-printed mailbox decoration set includes personalised
+            lettering and a decorative mail icon, allowing you to display your
+            family name, house name or custom message.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Designed for outdoor use and printed in durable PETG, each set is
+            made to order and tailored to your requested text.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Whether you're marking a family home, holiday cottage, business
+            premises or simply adding a touch of humour, your mailbox becomes a
+            feature rather than an afterthought.
+        </p>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">PETG</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value">Custom</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weight</span>
+                <span class="spec-value">Varies by Design</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Colour</span>
+                <span class="spec-value">Custom colours available</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weather Resistant</span>
+                <span class="spec-value">Yes</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Installation</span>
+                <span class="spec-value">Adhesive / Mounting Tape</span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <a
+            href="https://www.etsy.com/ie/listing/4523614749/personalized-mailbox-sign-no-junk-mail"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="buy-btn"
+        >
+            Buy on Etsy
+        </a>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need custom text, size or colour?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- IDEAS -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">Personalisation Ideas</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    Your mailbox sign can be personalised with a family name,
+                    house name, message or something a little more playful.
+                </p>
+
+                <ul
+                    class="text-gray-300 flex flex-col gap-2"
+                    style="list-style:none; padding:0;"
+                >
+                    <li>✓ The Smith Family</li>
+                    <li>✓ Rose Cottage</li>
+                    <li>✓ No Junk Mail</li>
+                    <li>✓ Happy Mail Only</li>
+                    <li>✓ The Johnsons</li>
+                    <li>✓ Parcel Central</li>
+                    <li>✓ Mail & Magic</li>
+                    <li>✓ Letters Welcome</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- INSTALLATION -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Installation</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    Installation is quick and simple. The custom lettering and
+                    decorative icon are supplied as separate pieces and can be
+                    attached to most clean, smooth mailbox surfaces using a
+                    suitable outdoor adhesive or double-sided mounting tape.
+                </p>
+
+                <ol style="padding-left:1.25rem;">
+                    <li>1. Clean and dry the mounting surface.</li>
+                    <li>2. Test the layout before attaching.</li>
+                    <li>
+                        3. Apply weather-resistant adhesive or outdoor mounting
+                        tape.
+                    </li>
+                    <li>4. Press firmly and allow the adhesive to cure.</li>
+                </ol>
+
+                <p class="text-gray-400 text-sm">
+                    Adhesive is not included, allowing you to choose the
+                    mounting solution best suited to your mailbox material and
+                    outdoor conditions.
+                </p>
+            </div>
+
+            <!-- SHIPPING -->
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

@@ -1,0 +1,306 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="LED Remote Wall Mount | Kacerys"
+    productName="LED Remote Controller Wall Mount"
+    price="€19.99"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/remote-wall/5eb6a2a6-7266-49aa-9452-494ef0e0764f.png"
+            alt="LED Remote Controller Wall Mount"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb"
+                src="/assets/remote-wall/2.png"
+                alt="LED Remote Wall Mount view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/remote-wall/1.png"
+                alt="LED Remote Wall Mount view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb active"
+                src="/assets/remote-wall/5eb6a2a6-7266-49aa-9452-494ef0e0764f.png"
+                alt="LED Remote Wall Mount"
+                onclick="swapImg(this)"
+            />
+        </div>
+    </div>
+
+    <!-- TAGS -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-outdoor">Outdoor</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-400 text-sm">Price excludes shipping</p>
+
+        <p class="text-gray-300 leading-relaxed">
+            A clean and minimal wall-mounted holder for LED remote controllers,
+            available in two versions: PLA for indoor use or PETG for outdoor
+            patio LED setups where weather resistance matters.
+        </p>
+
+        <!-- VERSION SELECTOR -->
+        <div class="product-card">
+            <p class="section-title">Choose Your Version</p>
+
+            <div
+                style="display:flex; gap:10px; margin-bottom:1.5rem; flex-wrap:wrap;"
+            >
+                <button
+                    class="version-tab active"
+                    onclick="switchVersion('indoor', this)"
+                >
+                    Indoor — PLA
+                </button>
+
+                <button
+                    class="version-tab"
+                    onclick="switchVersion('outdoor', this)"
+                >
+                    Outdoor / Patio — PETG
+                </button>
+            </div>
+
+            <!-- INDOOR -->
+            <div id="panel-indoor" class="version-panel active">
+                <p class="text-gray-400 text-sm mb-4">
+                    Printed in PLA. Ideal for interior walls, cabinets and
+                    bedside tables. Available in multiple colours.
+                </p>
+
+                <div>
+                    <div class="colour-swatch">
+                        <span
+                            class="swatch-dot"
+                            style="background:#f5f7fa; border:1px solid #444;"
+                        ></span>
+                        White
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#212121;"
+                        ></span>
+                        Black
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#2196f3;"
+                        ></span>
+                        Blue
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#f44336;"
+                        ></span>
+                        Red
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#9c27b0;"
+                        ></span>
+                        Purple
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#ff9800;"
+                        ></span>
+                        Orange
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-xs mt-3">
+                    Colour availability may vary. Contact us if you need a
+                    specific colour.
+                </p>
+            </div>
+
+            <!-- OUTDOOR -->
+            <div id="panel-outdoor" class="version-panel">
+                <p class="text-gray-400 text-sm mb-4">
+                    Printed in PETG for outdoor patio LED setups, providing
+                    better resistance to UV exposure, rain and changing
+                    temperatures.
+                </p>
+
+                <div>
+                    <div class="colour-swatch">
+                        <span
+                            class="swatch-dot"
+                            style="background:#f5f7fa; border:1px solid #444;"
+                        ></span>
+                        White
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#212121;"
+                        ></span>
+                        Black
+                    </div>
+
+                    <div class="colour-swatch">
+                        <span class="swatch-dot" style="background:#607d8b;"
+                        ></span>
+                        Grey
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-xs mt-3">
+                    Neutral colours recommended for outdoor use. Contact us for
+                    other options.
+                </p>
+            </div>
+        </div>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Material</span>
+                <span class="spec-value"> PLA / PETG </span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Dimensions</span>
+                <span class="spec-value"> 52 × 145 × 20 mm </span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Installation</span>
+                <span class="spec-value"> Adhesive tape or screws </span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Compatible With</span>
+                <span class="spec-value">
+                    Standard LED remote controllers
+                </span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Weather Resistant</span>
+                <span class="spec-value"> PETG version </span>
+            </div>
+        </div>
+
+        <!-- BUY -->
+        <button class="buy-btn-disabled" disabled>
+            Buy on Etsy — Coming Soon
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+        >
+            Need a specific colour or custom size?
+            <strong>Get in touch →</strong>
+        </a>
+    </div>
+
+    <!-- BOTTOM -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <!-- ABOUT -->
+        <div class="w-full md:w-1/2">
+            <p class="section-title">About This Product</p>
+
+            <div class="text-gray-300 leading-relaxed flex flex-col gap-4">
+                <p>
+                    Whether it's your living room LED strip remote or your patio
+                    lighting controller, this wall mount keeps it in one place —
+                    secure, accessible and off the floor.
+                </p>
+
+                <p>
+                    The minimal ribbed design holds the remote firmly without
+                    covering the buttons, while the slim profile allows the
+                    holder to sit neatly against a wall or other surface.
+                </p>
+
+                <p>
+                    The indoor PLA version comes in a range of colours. The
+                    outdoor PETG version is designed for patio or garden LED
+                    setups where improved weather resistance is required.
+                </p>
+
+                <p>
+                    Installation is simple. Use double-sided adhesive tape for a
+                    no-drill installation or screws for a more permanent
+                    mounting solution.
+                </p>
+            </div>
+        </div>
+
+        <!-- BOX CONTENTS -->
+        <div class="w-full md:w-5/12">
+            <p class="section-title">What's In The Box</p>
+
+            <ul
+                class="text-gray-300 flex flex-col gap-2"
+                style="list-style:none; padding:0;"
+            >
+                <li>✓ 1× LED Remote Wall Mount</li>
+                <li>✓ 2× Screws</li>
+                <li>✓ Double-sided adhesive tape</li>
+            </ul>
+
+            <div style="margin-top:2rem;">
+                <p class="section-title">Shipping</p>
+
+                <p class="text-gray-300 text-sm leading-relaxed">
+                    Ships within 3–5 business days. Tracked delivery available.
+                    Currently shipping to Ireland and UK.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERSION SELECTOR -->
+    <script is:inline>
+        function switchVersion(version, btn) {
+            document.querySelectorAll(".version-tab").forEach(function (tab) {
+                tab.classList.remove("active");
+            });
+
+            document
+                .querySelectorAll(".version-panel")
+                .forEach(function (panel) {
+                    panel.classList.remove("active");
+                });
+
+            btn.classList.add("active");
+
+            document.getElementById("panel-" + version).classList.add("active");
+        }
+    </script>
+
+    <!-- IMAGE GALLERY -->
+    <script is:inline>
+        function swapImg(thumb) {
+            document.getElementById("main-img").src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach(function (t) {
+                t.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>

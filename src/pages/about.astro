@@ -1,0 +1,291 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="About | Kacerys">
+    <Header />
+
+    <!-- About Section -->
+    <section class="pt-32 pb-12" style="background-color: #14213D;">
+        <div class="container max-w-5xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <p class="section-label">Who We Are</p>
+                <h1 class="text-5xl font-bold leading-tight brand-font mb-4">
+                    About <span class="cyan-text">K</span>acerys
+                </h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    A small Irish maker brand turning ideas into practical,
+                    well-engineered products.
+                </p>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex flex-wrap gap-8 mb-10">
+                <!-- Story -->
+                <div class="w-full md:w-1/2">
+                    <div class="about-card h-full">
+                        <p class="section-label">Our Story</p>
+                        <div
+                            class="flex flex-col gap-4 text-gray-300 leading-relaxed"
+                        >
+                            <p>
+                                Kacerys is an Irish maker brand based in
+                                Ireland, built around one simple idea — if
+                                something can be designed better, print it.
+                            </p>
+                            <p>
+                                Every product in the Kacerys catalogue starts
+                                with a real problem. Something broken that
+                                shouldn't need replacing. Something missing from
+                                the garden. Something that could work smarter.
+                                We design, prototype, test, and refine until the
+                                solution is practical and built to last.
+                            </p>
+                            <p>
+                                We are a small operation — hands-on, made to
+                                order, and focused on quality over quantity.
+                                Every item that leaves Kacerys is printed and
+                                inspected here in Ireland before it reaches you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What we make -->
+                <div class="w-full md:w-5/12 flex flex-col gap-6">
+                    <div class="about-card">
+                        <p class="section-label">What We Make</p>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Kacerys products span several categories — and we
+                            are always developing new ones.
+                        </p>
+                        <div>
+                            <span class="category-tag">Outdoor</span>
+                            <span class="category-tag">Garden</span>
+                            <span class="category-tag">Gifts</span>
+                            <span class="category-tag">Repair</span>
+                            <span class="category-tag">IoT</span>
+                            <span class="category-tag">3D Printed</span>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <p class="section-label">Based In</p>
+                        <div class="flex items-center gap-3">
+                            <svg
+                                width="20"
+                                height="20"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="#00D4FF"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                ></path>
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-300">Ireland</span>
+                        </div>
+                        <div class="flex items-center gap-3 mt-3">
+                            <svg
+                                width="20"
+                                height="20"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="#00D4FF"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                ></path>
+                            </svg>
+                            <span class="text-gray-300"
+                                >Shipping to Ireland & UK</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="about-card">
+                <p class="section-label">How We Work</p>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="#00D4FF"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-1">Design first</p>
+                        <p class="text-gray-400 text-sm">
+                            Every product is designed from scratch around a
+                            specific need. No guesswork — just careful
+                            engineering and iterative testing.
+                        </p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="#00D4FF"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-1">Made to order</p>
+                        <p class="text-gray-400 text-sm">
+                            Products are printed when you order them — not
+                            sitting in a warehouse. This keeps quality high and
+                            waste low.
+                        </p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="#00D4FF"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-1">
+                            Always developing
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            IoT products and smart devices are in active
+                            development. Kacerys is not just a print shop — it's
+                            a product lab.
+                        </p>
+                    </div>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <svg
+                            width="20"
+                            height="20"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="#00D4FF"
+                            stroke-width="2"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white mb-1">Irish made</p>
+                        <p class="text-gray-400 text-sm">
+                            Designed, printed, and shipped from Ireland.
+                            Supporting local and keeping it personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave -->
+    <svg
+        viewBox="0 0 1439 147"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+                <g fill="#1B2745">
+                    <path
+                        d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
+                    >
+                    </path>
+                </g>
+                <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+                    <g
+                        transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000)"
+                    >
+                        <path
+                            d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                            opacity="0.100000001"></path>
+                        <path
+                            d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                            opacity="0.100000001"></path>
+                        <path
+                            d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                            opacity="0.200000003"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+    <!-- CTA -->
+    <section class="container mx-auto text-center py-6 mb-12">
+        <h2
+            class="w-full my-2 text-4xl font-bold leading-tight text-center text-white"
+        >
+            Want to know more or place a custom order?
+        </h2>
+        <div class="w-full mb-4">
+            <div
+                class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+            >
+            </div>
+        </div>
+        <h3 class="my-4 text-xl leading-tight text-gray-300">
+            Get in touch — we are happy to help.
+        </h3>
+        <a
+            href="contact.html"
+            style="position: relative; z-index: 10;"
+            class="inline-block mx-auto hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none transform transition hover:scale-105 duration-300 ease-in-out"
+        >
+            Contact Kacerys
+        </a>
+    </section>
+
+    <Footer />
+</Layout>

@@ -1,0 +1,347 @@
+:root {
+    --kacerys-black: #0F1115;
+    --kacerys-graphite: #1B1F24;
+    --kacerys-cyan: #00D4FF;
+    --kacerys-gold: #C58B39;
+    --kacerys-white: #faf5f5;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--kacerys-black);
+
+}
+
+.brand-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.cyan-text {
+    color: var(--kacerys-cyan);
+}
+
+.gradient {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.18), transparent 35%),
+        linear-gradient(135deg, #0F1115 0%, #1B1F24 55%, #050608 100%);
+}
+
+
+
+.gold-border {
+    border-color: var(--kacerys-gold);
+}
+
+.contact-card .form-label .form-input .form-input:focus .form-input::placeholder textarea.form-input .submit-btn .submit-btn:hover .info-block .info-icon
+/* =============================================
+       PRODUCT PAGE TEMPLATE STYLES
+       Copy this file for every new product page.
+       Only change the content, not these styles.
+       ============================================= */
+
+.product-img-main {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 480px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.product-img-main:hover {
+    opacity: 0.92;
+}
+
+.thumb-grid {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.thumb:hover,
+.thumb.active {
+    border-color: #00D4FF;
+}
+
+.product-section {
+    background: #14213D;
+    padding: 4rem 0;
+}
+
+.product-card {
+    background: #1B2745;
+    border: 1px solid rgba(0, 212, 255, 0.12);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.price-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #00D4FF;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.tag-outdoor {
+    background: #e1f5ee;
+    color: #0f6e56;
+}
+
+.tag-repair {
+    background: #faeeda;
+    color: #854f0b;
+}
+
+.tag-iot {
+    background: #e6f1fb;
+    color: #185fa5;
+}
+
+.tag-home {
+    background: #fbeaf0;
+    color: #993556;
+}
+
+.tag-garden {
+    background: #e8f5e1;
+    color: #2d6a0f;
+}
+
+.tag-3dprinted {
+    background: #eeedfe;
+    color: #534ab7;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+    font-size: 0.9rem;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    color: #8899aa;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+}
+
+.spec-value {
+    color: #F5F7FA;
+    font-weight: 500;
+}
+
+.buy-btn {
+    display: block;
+    width: 100%;
+    background: #00D4FF;
+    color: #0F1115;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 16px 24px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+    opacity: 0.88;
+    transform: scale(1.02);
+}
+
+.buy-btn-disabled {
+    background: #2a3a5c;
+    color: #6b7fa0;
+    cursor: not-allowed;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 16px 24px;
+    border-radius: 9999px;
+    border: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #00D4FF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.75;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #00D4FF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+
+
+/* =============================================
+   PROJECTS PAGE GRID
+   ============================================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.project-grid>a {
+    display: block;
+    width: 100%;
+}
+
+.project-card>img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================================
+   CONTACT PAGE
+   ============================================= */
+
+.contact-card {
+    max-width: 760px;
+    width: 100%;
+    background: #1B2745;
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+    display: block;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: #14213D;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #94A3B8;
+}
+
+.form-input:focus {
+    border-color: #00D4FF;
+    box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.12);
+}
+
+textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #00D4FF;
+    color: #0F1115;
+    font-weight: 700;
+    padding: 0.95rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 212, 255, 0.08);
+    border-radius: 10px;
+}
