@@ -1,0 +1,264 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Cyberpunk Hardware Box | Kacerys"
+    productName="Arasaka-Inspired Hardware Box"
+    price="Coming Soon"
+>
+    <!-- IMAGES -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/columpio/columpio negro.png"
+            alt="Columpio negro "
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb"
+                src="/assets/columpio/columpio blue.png"
+                alt="Columpio blue"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/columpio/columpio wall.png"
+                alt="Columpio blue"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/columpio/columpio negro.png"
+                alt="Columpio blue"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb active"
+                src="/assets/columpio/thumbnail columpio.png"
+                alt="Arasaka-inspired hardware box open"
+                onclick="swapImg(this)"
+            />
+
+            <!-- TAGS -->
+            <div slot="tags">
+                <span class="tag tag-home">Home</span>
+                <span class="tag tag-3dprinted">3D Printed</span>
+            </div>
+
+            <!-- DETAILS -->
+            <div slot="details" class="flex flex-col gap-6">
+                <p class="text-gray-400 text-sm">Custom colours available</p>
+
+                <p class="text-gray-300 leading-relaxed">
+                    This custom Arasaka-inspired hardware organiser was designed
+                    and 3D printed to store small electronic components, tools,
+                    screws, bolts and other workshop hardware in a compact
+                    portable case.
+                </p>
+
+                <p class="text-gray-300 leading-relaxed">
+                    The main structure is printed in PLA and features a
+                    two-level storage system. The lower section is divided into
+                    compartments, while the removable upper tray provides
+                    additional storage for small tools and electronic
+                    components.
+                </p>
+
+                <p class="text-gray-300 leading-relaxed">
+                    Metal bolts, nuts and threaded hardware are used for the
+                    hinge and locking mechanisms. Contrasting printed components
+                    create the functional latch and hinge system while giving
+                    the case its Cyberpunk-inspired industrial appearance.
+                </p>
+
+                <!-- COLOURS -->
+                <div class="product-card">
+                    <p class="section-title">Available Colours</p>
+
+                    <p class="text-gray-400 text-sm mb-4">
+                        Printed in PLA. Available in multiple colours.
+                    </p>
+
+                    <div>
+                        <div class="colour-swatch">
+                            <span
+                                class="swatch-dot"
+                                style="background:#f5f7fa; border:1px solid #444;"
+                            ></span>
+                            White
+                        </div>
+
+                        <div class="colour-swatch">
+                            <span class="swatch-dot" style="background:#212121;"
+                            ></span>
+                            Black
+                        </div>
+
+                        <div class="colour-swatch">
+                            <span class="swatch-dot" style="background:#2196f3;"
+                            ></span>
+                            Blue
+                        </div>
+
+                        <div class="colour-swatch">
+                            <span class="swatch-dot" style="background:#f44336;"
+                            ></span>
+                            Red
+                        </div>
+
+                        <div class="colour-swatch">
+                            <span class="swatch-dot" style="background:#9c27b0;"
+                            ></span>
+                            Purple
+                        </div>
+
+                        <div class="colour-swatch">
+                            <span class="swatch-dot" style="background:#ff9800;"
+                            ></span>
+                            Orange
+                        </div>
+                    </div>
+
+                    <p class="text-gray-500 text-xs mt-3">
+                        Colour availability may vary. Contact us if you need a
+                        specific colour.
+                    </p>
+                </div>
+
+                <!-- SPECIFICATIONS -->
+                <div class="product-card">
+                    <p class="section-title">Specifications</p>
+
+                    <div class="spec-row">
+                        <span class="spec-label">Material</span>
+                        <span class="spec-value">PLA</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span class="spec-label">Dimensions</span>
+                        <span class="spec-value">150 × 50 × 125 mm</span>
+                    </div>
+
+                    <div class="spec-row">
+                        <span class="spec-label">Hardware</span>
+                        <span class="spec-value">M4 Bolts Included</span>
+                    </div>
+                </div>
+
+                <!-- BUY -->
+                <button class="buy-btn-disabled" disabled>
+                    Buy on Etsy — Coming Soon
+                </button>
+
+                <a
+                    href="/contact"
+                    style="color:#00D4FF; font-size:0.85rem; text-align:center; text-decoration:none;"
+                >
+                    Need a specific colour or custom size?
+                    <strong>Get in touch →</strong>
+                </a>
+            </div>
+
+            <!-- BOTTOM -->
+            <div
+                slot="bottom"
+                class="mt-12 flex flex-wrap gap-10 justify-center"
+            >
+                <!-- DESIGN FEATURES -->
+                <div class="w-full md:w-1/2">
+                    <p class="section-title">Design Features</p>
+
+                    <div
+                        class="text-gray-300 leading-relaxed flex flex-col gap-4"
+                    >
+                        <p>
+                            The organiser uses a modular two-level layout to
+                            maximise the available internal space. A removable
+                            upper tray provides quick access to frequently used
+                            tools and electronic components, while larger
+                            quantities of hardware can be stored underneath.
+                        </p>
+
+                        <p>
+                            The external latches and hinges combine printed
+                            components with standard metal hardware rather than
+                            relying entirely on plastic joints. This provides a
+                            more mechanical appearance while allowing individual
+                            components to be replaced or modified.
+                        </p>
+
+                        <p>
+                            The contrasting black and pink colour scheme, raised
+                            logo and industrial hardware were inspired by the
+                            Arasaka aesthetic from Cyberpunk 2077, turning a
+                            practical workshop organiser into a themed
+                            engineering project.
+                        </p>
+
+                        <div>
+                            <p class="section-title mt-6">Project Skills</p>
+
+                            <p>
+                                3D Modelling · FDM 3D Printing · Prototyping ·
+                                Mechanical Assembly · Design for Manufacturing ·
+                                Dimensional Tolerances · Hardware Integration
+                            </p>
+                        </div>
+
+                        <p class="text-gray-500 text-sm">
+                            Cyberpunk 2077, Arasaka and related trademarks are
+                            property of CD PROJEKT RED. This is an unofficial
+                            fan-made project and is not affiliated with or
+                            endorsed by CD PROJEKT RED.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- MATERIALS -->
+                <div class="w-full md:w-5/12">
+                    <p class="section-title">Materials & Components</p>
+
+                    <ul
+                        class="text-gray-300 flex flex-col gap-2"
+                        style="list-style:none; padding:0;"
+                    >
+                        <li>✓ PLA main enclosure and internal trays</li>
+                        <li>✓ PLA contrasting details and latch components</li>
+                        <li>✓ M4 metal bolts</li>
+                        <li>✓ Removable internal organiser tray</li>
+                        <li>✓ Multi-compartment hardware storage</li>
+                        <li>✓ Mechanical hinges and locking system</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem;">
+                        <p class="section-title">Shipping</p>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Ships within 3–5 business days. Tracked delivery
+                            available. Currently shipping to Ireland and UK.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMAGE GALLERY -->
+            <script is:inline>
+                function swapImg(thumb) {
+                    document.getElementById("main-img").src = thumb.src;
+
+                    document.querySelectorAll(".thumb").forEach(function (t) {
+                        t.classList.remove("active");
+                    });
+
+                    thumb.classList.add("active");
+                }
+            </script>
+        </div>
+    </div>
+</ProductLayout>
