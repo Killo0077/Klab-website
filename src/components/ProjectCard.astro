@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+const { project } = Astro.props as { project: CollectionEntry<"projects"> };
+const { title, image, description, category, url } = project.data;
+const categoryClass: Record<string, string> = {
+    "3D Printed": "3dprinted", Home: "home", Outdoor: "outdoor",
+    Garden: "garden", Repair: "repair", IoT: "iot",
+};
+---
+<a href={url} class="no-underline">
+    <div class="project-card" data-categories={category.map(c => categoryClass[c] ?? c.toLowerCase()).join(" ")}>
+        <img src={image} alt={title} loading="lazy" />
+        <div class="card-body">
+            <div class="mb-2">
+                {category.map(tag => <span class={`tag tag-${categoryClass[tag] ?? "home"}`}>{tag}</span>)}
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">{title}</h3>
+            <p class="text-gray-300 text-sm flex-1">{description}</p>
+        </div>
+    </div>
+</a>
