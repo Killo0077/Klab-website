@@ -409,7 +409,7 @@ body.gradient {
 /* Home hero */
 .kac-home, .kac-catalogue { background: #071623; color: #f1f7fb; }
 .kac-hero { position: relative; min-height: 575px; padding-top: 80px; overflow: hidden; isolation: isolate; background: #071522; }
-.kac-hero-art { position: absolute; inset: 75px 0 45px 37%; background: url('/assets/kacerys-gnome-hero.webp') center 45% / cover no-repeat; z-index: -2; }
+.kac-hero-art { position: absolute; inset: 75px 0 45px 37%; background: url('/assets/kacerys-gnome-hero-new.png') center 45% / cover no-repeat; z-index: -2; }
 .kac-hero-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #061624 0%, #061624 23%, rgba(6,22,36,.88) 36%, rgba(6,22,36,.14) 65%, rgba(4,12,21,.12) 100%), linear-gradient(0deg, #071623 1%, rgba(7,22,35,0) 29%); }
 .kac-hero-inner { min-height: 480px; display: flex; align-items: center; }
 .kac-hero-copy { max-width: 560px; padding: 38px 0 62px; }
