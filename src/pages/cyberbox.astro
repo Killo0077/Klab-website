@@ -12,21 +12,33 @@ import ProductLayout from "../layouts/ProductLayout.astro";
         <img
             id="main-img"
             class="product-img-main"
-            src="/assets/cyberpunk/orasakabox.png"
+            src="/assets/cyberpunk/orasakabox.webp"
+            width="1086"
+            height="1448"
+            fetchpriority="high"
+            decoding="async"
             alt="Arasaka-inspired hardware box"
         />
 
         <div class="thumb-grid">
             <img
                 class="thumb"
-                src="/assets/cyberpunk/orasaka.png"
+                src="/assets/cyberpunk/orasaka.webp"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
                 alt="Arasaka-inspired hardware box closed"
                 onclick="swapImg(this)"
             />
 
             <img
                 class="thumb active"
-                src="/assets/cyberpunk/orasakabox.png"
+                src="/assets/cyberpunk/orasakabox.webp"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
                 alt="Arasaka-inspired hardware box open"
                 onclick="swapImg(this)"
             />

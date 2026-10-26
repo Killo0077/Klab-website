@@ -1,7 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { projectImage, CARD_SIZES } from "../utils/projectImage";
 const { project } = Astro.props as { project: CollectionEntry<"projects"> };
-const { title, image, description, category, url } = project.data;
+const { title, image, imageWidth, imageHeight, description, category, url } = project.data;
+const img = projectImage(image, imageWidth, imageHeight);
 const categoryClass: Record<string, string> = {
     "3D Printed": "3dprinted",
     Home: "home",
@@ -19,7 +21,16 @@ const categoryClass: Record<string, string> = {
             .map((c) => categoryClass[c] ?? c.toLowerCase())
             .join(" ")}
     >
-        <img src={image} alt={title} loading="lazy" />
+        <img
+            src={img.src}
+            srcset={img.srcset}
+            sizes={img.srcset ? CARD_SIZES : undefined}
+            width={img.width}
+            height={img.height}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+        />
         <div class="card-body">
             <div class="mb-2">
                 {

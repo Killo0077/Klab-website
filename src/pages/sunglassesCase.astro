@@ -12,21 +12,33 @@ import ProductLayout from "../layouts/ProductLayout.astro";
         <img
             id="main-img"
             class="product-img-main"
-            src="/assets/cyberpunk/sunglassescase.png"
+            src="/assets/cyberpunk/sunglassescase.webp"
+            width="1086"
+            height="1448"
+            fetchpriority="high"
+            decoding="async"
             alt="Cyberpunk-Inspired Sunglasses Case"
         />
 
         <div class="thumb-grid">
             <img
                 class="thumb active"
-                src="/assets/cyberpunk/sunglassescase.png"
+                src="/assets/cyberpunk/sunglassescase.webp"
+                width="1086"
+                height="1448"
+                loading="lazy"
+                decoding="async"
                 alt="Cyberpunk Sunglasses Case closed"
                 onclick="swapImg(this)"
             />
 
             <img
                 class="thumb"
-                src="/assets/cyberpunk/sunglassesopen.png"
+                src="/assets/cyberpunk/sunglassesopen.webp"
+                width="1086"
+                height="1449"
+                loading="lazy"
+                decoding="async"
                 alt="Cyberpunk Sunglasses Case open"
                 onclick="swapImg(this)"
             />

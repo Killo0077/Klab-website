@@ -1,10 +1,12 @@
 ---
 title: "Custom Mailbox Sign"
-image: "/assets/mailbox/mailbox1.png"
+image: "/assets/mailbox/mailbox1.webp"
+imageWidth: 489
+imageHeight: 548
 price: "See project"
 material: "See product details"
 description: "Make your mailbox stand out with personalized\n                                3D-printed lettering and decorative icons.\n                                Create a unique entrance feature for your home."
-url: "/mailbox"
+url: "/mailbox/"
 order: 8
 category:
   - "Home"

@@ -11,21 +11,33 @@ import ProductLayout from "../layouts/ProductLayout.astro";
         <img
             id="main-img"
             class="product-img-main"
-            src="/assets/bonsaiPot/bonsai pot thumbnail.png"
+            src="/assets/bonsaiPot/bonsai pot thumbnail.webp"
+            width="1402"
+            height="1122"
+            fetchpriority="high"
+            decoding="async"
             alt="Japanese-inspired bonsai pot"
         />
 
         <div class="thumb-grid">
             <img
                 class="thumb"
-                src="/assets/bonsaiPot/painted.png"
+                src="/assets/bonsaiPot/painted.webp"
+                width="1402"
+                height="1122"
+                loading="lazy"
+                decoding="async"
                 alt="Painted bonsai pot"
                 onclick="swapImg(this)"
             />
 
             <img
                 class="thumb active"
-                src="/assets/bonsaiPot/bonsai pot thumbnail.png"
+                src="/assets/bonsaiPot/bonsai pot thumbnail.webp"
+                width="1402"
+                height="1122"
+                loading="lazy"
+                decoding="async"
                 alt="Bonsai pot"
                 onclick="swapImg(this)"
             />

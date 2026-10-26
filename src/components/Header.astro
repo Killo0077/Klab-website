@@ -1,112 +1,48 @@
-<!-- Nav -->
-<nav id="header" class="fixed w-full z-30 top-0 text-white">
-    <div
-        class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"
-    >
-        <div class="pl-4 flex items-center">
-            <a
-                class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl brand-font"
-                href="/"
-            >
-                <span class="cyan-text">K</span>acerys
-            </a>
-        </div>
-        <div class="block lg:hidden pr-4">
-            <button
-                id="nav-toggle"
-                class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-            >
-                <svg
-                    class="fill-current h-6 w-6"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-                    ></path>
-                </svg>
-            </button>
-        </div>
-        <div
-            class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
-            id="nav-content"
-        >
-            <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-3">
-                    <a
-                        class="inline-block py-2 px-4 text-black font-bold no-underline"
-                        href="/">Home</a
-                    >
-                </li>
-                <li class="mr-3">
-                    <a
-                        class="inline-block text-black no-underline hover:text-gray-800 py-2 px-4"
-                        href="/projects">Projects</a
-                    >
-                </li>
-                <li class="mr-3">
-                    <a
-                        class="inline-block text-black no-underline hover:text-gray-800 py-2 px-4"
-                        href="/contact">Contact</a
-                    >
-                </li>
-            </ul>
-        </div>
-    </div>
-    <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
-</nav>
-
-<!-- Nav scroll script -->
+---
+const currentPath = Astro.url.pathname.replace(/\/$/, "") || "/";
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+---
+<header class="site-header" id="site-header">
+  <div class="site-header-inner kac-wrap">
+    <a href="/" class="site-logo" aria-label="Kacerys — Home">
+      <svg aria-hidden="true" viewBox="0 0 48 48" fill="none" width="38" height="38">
+        <path d="M24 3 43 14v20L24 45 5 34V14L24 3Z" stroke="currentColor" stroke-width="2.4"/>
+        <path d="M24 12 35 18.5v11L24 36l-11-6.5v-11L24 12Z" stroke="currentColor" stroke-width="2"/>
+        <path d="m5 14 19 11 19-11M24 25v20" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span class="site-wordmark"><strong>KACERYS</strong><small>DESIGN · PRINT · IMPROVE</small></span>
+    </a>
+    <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+      {navItems.map(item => (
+        <a href={item.href} class:list={["site-nav-link", { "is-active": currentPath === item.href }]} aria-current={currentPath === item.href ? "page" : undefined}>{item.label}</a>
+      ))}
+      <a href="/projects" class="site-mobile-projects">Explore projects <span aria-hidden="true">→</span></a>
+    </nav>
+    <a href="/projects" class="site-header-cta">Explore projects <span aria-hidden="true">↗</span></a>
+    <button type="button" class="site-menu-button" id="site-menu-button" aria-controls="site-navigation" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 <script>
-    var scrollpos = window.scrollY;
-    var header = document.getElementById("header");
-    var navcontent = document.getElementById("nav-content");
-    var navaction = document.getElementById("navAction");
-    var toToggle = document.querySelectorAll(".toggleColour");
-
-    document.addEventListener("scroll", function () {
-        scrollpos = window.scrollY;
-        if (scrollpos > 10) {
-            header.classList.add("bg-white");
-            navaction.classList.remove("bg-white");
-            navaction.classList.add("gradient");
-            navaction.classList.remove("text-gray-800");
-            navaction.classList.add("text-white");
-            for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-gray-800");
-                toToggle[i].classList.remove("text-white");
-            }
-            header.classList.add("shadow");
-            navcontent.classList.remove("bg-gray-100");
-            navcontent.classList.add("bg-white");
-        } else {
-            header.classList.remove("bg-white");
-            navaction.classList.remove("gradient");
-            navaction.classList.add("bg-white");
-            navaction.classList.remove("text-white");
-            navaction.classList.add("text-gray-800");
-            for (var i = 0; i < toToggle.length; i++) {
-                toToggle[i].classList.add("text-white");
-                toToggle[i].classList.remove("text-gray-800");
-            }
-            header.classList.remove("shadow");
-            navcontent.classList.remove("bg-white");
-            navcontent.classList.add("bg-gray-100");
-        }
-    });
-</script>
-
-<!-- Mobile nav toggle -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var navToggleBtn = document.getElementById("nav-toggle");
-        var navMenuDiv = document.getElementById("nav-content");
-
-        if (navToggleBtn && navMenuDiv) {
-            navToggleBtn.addEventListener("click", function (e) {
-                e.stopPropagation();
-                navMenuDiv.classList.toggle("hidden");
-            });
-        }
-    });
+  const menuButton = document.querySelector<HTMLButtonElement>("#site-menu-button");
+  const navigation = document.querySelector<HTMLElement>("#site-navigation");
+  const siteHeader = document.querySelector<HTMLElement>("#site-header");
+  menuButton?.addEventListener("click", () => {
+    const isOpen = navigation?.classList.toggle("is-open") ?? false;
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+  navigation?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    navigation.classList.remove("is-open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  }));
+  const checkScroll = () => siteHeader?.classList.toggle("is-scrolled", window.scrollY > 18);
+  window.addEventListener("scroll", checkScroll, { passive: true });
+  checkScroll();
 </script>

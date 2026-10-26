@@ -13,6 +13,10 @@ import ProductLayout from "../layouts/ProductLayout.astro";
             id="main-img"
             class="product-img-main"
             src="/assets/Henry-Hoover/retainingRing.webp"
+            width="1000"
+            height="750"
+            fetchpriority="high"
+            decoding="async"
             alt="Henry Hoover Retaining Ring"
         />
 
@@ -20,6 +24,10 @@ import ProductLayout from "../layouts/ProductLayout.astro";
             <img
                 class="thumb active"
                 src="/assets/Henry-Hoover/retainingRing.webp"
+                width="1000"
+                height="750"
+                loading="lazy"
+                decoding="async"
                 alt="Henry Hoover Retaining Ring"
                 onclick="swapImg(this)"
             />
