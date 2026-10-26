@@ -1,0 +1,155 @@
+---
+import ProductLayout from "../layouts/ProductLayout.astro";
+---
+
+<ProductLayout
+    title="Modular Desk & Pegboard Organiser | Kacerys"
+    productName="Modular Desk & Pegboard Organiser"
+    price="Concept — Coming Soon"
+>
+    <!-- IMAGE GALLERY -->
+    <div slot="images">
+        <img
+            id="main-img"
+            class="product-img-main"
+            src="/assets/modular-organiser/desk-view.png"
+            alt="Concept visualisation of a modular 3D-printed desk organiser"
+        />
+
+        <div class="thumb-grid">
+            <img
+                class="thumb active"
+                src="/assets/modular-organiser/desk-view.png"
+                alt="Desk view"
+                onclick="swapImg(this)"
+            />
+
+            <img
+                class="thumb"
+                src="/assets/modular-organiser/wall-view.png"
+                alt="Pegboard mounting concept"
+                onclick="swapImg(this)"
+            />
+        </div>
+
+        <p class="text-gray-400 text-sm mt-3">
+            Concept visualisations — not photographs of a finished print.
+        </p>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div slot="tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-3dprinted">3D Printed</span>
+    </div>
+
+    <!-- PRODUCT DETAILS -->
+    <div slot="details" class="flex flex-col gap-6">
+        <p class="text-gray-300 leading-relaxed">
+            A modular 3D-printable organiser designed to keep everyday
+            essentials close at hand, whether on a desk or mounted on a
+            compatible pegboard.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            The design features two storage levels, decorative panels, a
+            honeycomb back section and a side compartment for pens and other
+            small accessories.
+        </p>
+
+        <p class="text-gray-300 leading-relaxed">
+            Designed for everyday essentials such as glasses, remote controls,
+            keys, stationery and small electronic accessories.
+        </p>
+
+        <!-- SPECIFICATIONS -->
+        <div class="product-card">
+            <p class="section-title">Specifications</p>
+
+            <div class="spec-row">
+                <span class="spec-label">Width</span>
+                <span class="spec-value">220 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Height</span>
+                <span class="spec-value">220 mm</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Depth</span>
+                <span class="spec-value">To be confirmed</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Planned Material</span>
+                <span class="spec-value">PLA / PETG</span>
+            </div>
+
+            <div class="spec-row">
+                <span class="spec-label">Development</span>
+                <span class="spec-value">Design Concept</span>
+            </div>
+        </div>
+
+        <!-- AVAILABILITY -->
+        <button class="buy-btn-disabled" disabled>
+            Coming Soon — Prototype in Development
+        </button>
+
+        <a
+            href="/contact"
+            style="color:#00D4FF; font-size:0.85rem; text-align:center;"
+        >
+            Questions or suggestions? Get in touch →
+        </a>
+    </div>
+
+    <!-- ADDITIONAL INFORMATION -->
+    <div slot="bottom" class="mt-12 flex flex-wrap gap-10 justify-center">
+        <div class="w-full md:w-1/2">
+            <p class="section-title">Design Features</p>
+
+            <ul class="text-gray-300 flex flex-col gap-3">
+                <li>✓ Two-level storage design</li>
+                <li>✓ Modular side accessory compartment</li>
+                <li>✓ Honeycomb decorative back panel</li>
+                <li>✓ Customisable colour combinations</li>
+                <li>✓ Space for glasses, remotes and stationery</li>
+                <li>✓ Intended for desktop or pegboard organisation</li>
+            </ul>
+        </div>
+
+        <div class="w-full md:w-5/12">
+            <p class="section-title">Development Status</p>
+
+            <p class="text-gray-300 leading-relaxed">
+                This project is currently in the design stage. It has not yet
+                been physically printed or tested.
+            </p>
+
+            <p class="text-gray-300 leading-relaxed mt-4">
+                Mounting compatibility with SKÅDIS-style pegboards, material
+                selection and final dimensions will be verified during
+                prototyping.
+            </p>
+        </div>
+    </div>
+
+    <!-- GALLERY INTERACTION -->
+    <script is:inline>
+        function swapImg(thumb) {
+            const mainImg = document.getElementById("main-img");
+
+            if (!mainImg) return;
+
+            mainImg.src = thumb.src;
+
+            document.querySelectorAll(".thumb").forEach((item) => {
+                item.classList.remove("active");
+            });
+
+            thumb.classList.add("active");
+        }
+    </script>
+</ProductLayout>
